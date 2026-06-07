@@ -295,9 +295,9 @@ def main():
         print(f"  {stage:<25} {acc:>10.4f} {auc:>10.4f}{marker}")
 
     if acc_rec > acc_pgd:
-        print(f"\n  ✅ Recovery BEATS PGD attack by {(acc_rec - acc_pgd)*100:.2f}%!")
+        print(f"\n   Recovery BEATS PGD attack by {(acc_rec - acc_pgd)*100:.2f}%!")
     else:
-        print(f"\n  ⚠️  Recovery did not beat PGD attack.")
+        print(f"\n    Recovery did not beat PGD attack.")
 
     print("\n[Step 6] Generating diagnostic plots...")
     plot_results(results, influence_scores, ensemble_scores, poison_idx_pgd, len(y_train))
